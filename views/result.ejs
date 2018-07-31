@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        table {
+            color: white;
+        }
+
+        td,
+        th {
+            text-align: center;
+        }
+
+        td {
+            width: 200px;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+        }
+
+        th {
+            border-bottom: 1px solid yellow;
+            border-left: 1px solid yellow;
+            border-right: 1px solid yellow;
+            border-top: 1px solid yellow;
+
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Time</th>
+        <% users.forEach(function(use){%>
+        <tr>
+        <td><%= use.name%></td>
+        <td><%= use.email%></td>
+        <td><%= use.contact%></td>
+        <td><%= use.time%></td>
+        </tr>
+        });
+    </table>
+</body>
+
+</html>
